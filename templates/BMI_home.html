@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <!-- create a class for the text size and font -->
     <head>
         <title>
            BMI Calculator 
@@ -13,11 +14,33 @@
     <p>
         Height
         </p>
+        <!-- the name= "Feet" is used for the get in teh py file for the server -->
     <form action = "{{ url_for('BMICalculations') }}" method="post">
         <label for="Feet"> Feet: </label>
-        <input type = "number" id = "Feet" name = "Feet" min = "1">
+        <select id = "Feet" name="Feet">
+            <option value = "3"> 3 </option>
+            <option value = "4"> 4 </option>
+            <option value = "5"> 5 </option>
+            <option value = "6"> 6 </option>
+            <option value = "7"> 7 </option>
+            <option value = "8"> 8 </option>
+        </select> 
+
         <label for="Inches"> Inches: </label>
-        <input type = "number" id = "Inches" name="Inches" min = "1" max = "11">
+        <select id = "Inches" name="Inches">
+            <option value = "0"> 0 </option>
+            <option value = "1"> 1 </option>
+            <option value = "2"> 2 </option>
+            <option value = "3"> 3 </option>
+            <option value = "4"> 4 </option>
+            <option value = "5"> 5 </option>
+            <option value = "6"> 6 </option>
+            <option value = "7"> 7 </option>
+            <option value = "8"> 8 </option>
+            <option value = "9"> 9 </option>
+            <option value = "10"> 10 </option>
+            <option value = "11"> 11 </option>
+        </select>
     <p>
         Weight
     </p>
@@ -25,7 +48,8 @@
         <input type = "number" id = "Pounds" name = "Pounds" min = "1"><br>
         <button type = "submit" > Calculate </button><br> 
     <p>
-        Result: {{result}}
+        Your BMI is: {{result}} <br>
+        BMI Category: {{categoryResult}}
     </p>
     </form>
     
