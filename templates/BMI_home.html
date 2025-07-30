@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           BMI Calculator 
+        </title>
+        <link rel = "stylesheet" type="text/css" href="static/style.css">
+  </head>
+  <h1>
+    BMI Calculator
+  </h1>
+  <body>
+    <p>
+        Height
+        </p>
+    <form action = "{{ url_for('BMICalculations') }}" method="post">
+        <label for="Feet"> Feet: </label>
+        <input type = "number" id = "Feet" name = "Feet" min = "1">
+        <label for="Inches"> Inches: </label>
+        <input type = "number" id = "Inches" name="Inches" min = "1" max = "11">
+    <p>
+        Weight
+    </p>
+        <label for="Pounds"> Pounds: </label>
+        <input type = "number" id = "Pounds" name = "Pounds" min = "1"><br>
+        <button type = "submit" > Calculate </button><br> 
+    <p>
+        Result: {{result}}
+    </p>
+    </form>
+    
+    
+  </body>
+</html>
