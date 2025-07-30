@@ -28,8 +28,8 @@ def BMICalculatorFun(feet, inches, pounds):
     pre = (pounds*FORMULA_CONSTANT) / feet_converted
     return float(format((pre / feet_converted), ".1f"))
 
+# function used to return the category result
 def StringDeterminedResults(calculatedTotal):
-
     if(calculatedTotal < 18.5):
         return "Underweight"
     elif(calculatedTotal >= 18.5 and calculatedTotal <= 24.9):
